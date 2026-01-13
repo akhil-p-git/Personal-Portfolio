@@ -6,7 +6,6 @@ const titles = [
   "Software Developer",
   "Problem Solver",
   "Code Enthusiast",
-  "Tech Explorer",
 ];
 
 export default function Hero() {
@@ -16,7 +15,7 @@ export default function Hero() {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowContent(true), 500);
+    const timer = setTimeout(() => setShowContent(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -47,90 +46,36 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6"
     >
-      {/* Background grid pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
-          }}
-        />
-      </div>
-
       <div
-        className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
+        className={`max-w-3xl mx-auto text-center transition-all duration-700 ${
           showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        {/* Terminal window */}
-        <div className="terminal-window max-w-2xl mx-auto text-left mb-8">
-          <div className="terminal-header">
-            <div className="terminal-dot red"></div>
-            <div className="terminal-dot yellow"></div>
-            <div className="terminal-dot green"></div>
-            <span className="text-[#888] text-xs ml-4">~/portfolio</span>
-          </div>
-          <div className="terminal-body space-y-2">
-            <div>
-              <span className="text-[#00ff00]">$ </span>
-              <span className="text-[#888]">whoami</span>
-            </div>
-            <div className="text-[#00ffff]">akhil</div>
-            <div className="mt-4">
-              <span className="text-[#00ff00]">$ </span>
-              <span className="text-[#888]">cat role.txt</span>
-            </div>
-            <div className="text-[#00ff00] glow text-xl md:text-2xl">
-              {text}
-              <span className="cursor"></span>
-            </div>
-            <div className="mt-4">
-              <span className="text-[#00ff00]">$ </span>
-              <span className="text-[#888]">cat status.txt</span>
-            </div>
-            <div className="text-[#ffb000]">
-              Ready to build something amazing_
-            </div>
-          </div>
+        <p className="text-[#a1a1a1] mb-4">Hi, my name is</p>
+
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+          Akhil
+        </h1>
+
+        <div className="text-2xl md:text-4xl text-[#a1a1a1] mb-6 h-12">
+          <span>{text}</span>
+          <span className="inline-block w-[3px] h-8 md:h-10 bg-[#3b82f6] ml-1 animate-pulse align-middle" />
         </div>
 
-        {/* ASCII Art Name */}
-        <pre className="ascii-art hidden md:block mb-8">
-{`
- █████╗ ██╗  ██╗██╗  ██╗██╗██╗
-██╔══██╗██║ ██╔╝██║  ██║██║██║
-███████║█████╔╝ ███████║██║██║
-██╔══██║██╔═██╗ ██╔══██║██║██║
-██║  ██║██║  ██╗██║  ██║██║███████╗
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
-`}
-        </pre>
-
-        <p className="text-[#888] text-lg mb-8 max-w-xl mx-auto">
-          Crafting digital experiences with clean code and creative solutions.
+        <p className="text-[#666] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          I build things for the web. Passionate about creating clean,
+          efficient solutions and turning ideas into reality through code.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#projects" className="terminal-btn">
-            ./view_projects
+          <a href="#projects" className="btn-primary">
+            View My Work
           </a>
-          <a href="#contact" className="terminal-btn">
-            ./contact_me
+          <a href="#contact" className="btn-secondary">
+            Get In Touch
           </a>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="text-[#888] text-xs animate-bounce">
-            <span className="text-[#00ff00]">[</span> scroll down{" "}
-            <span className="text-[#00ff00]">]</span>
-          </div>
         </div>
       </div>
     </section>

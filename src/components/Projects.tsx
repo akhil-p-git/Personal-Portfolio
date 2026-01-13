@@ -9,53 +9,46 @@ interface Project {
   tech: string[];
   github?: string;
   demo?: string;
-  status: "completed" | "in-progress" | "planned";
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: "Personal Portfolio",
+    title: "Precision Roof Measurement",
     description:
-      "A terminal-themed portfolio website built with Next.js and TypeScript. Features include typing animations, CRT effects, and responsive design.",
-    tech: ["Next.js", "TypeScript", "TailwindCSS"],
-    github: "https://github.com/akhil-p-git/Personal-Portfolio",
-    status: "in-progress",
+      "An AI-driven roof measurement and complexity mapping application. Upload satellite or aerial imagery to automatically detect roof boundaries, calculate precise measurements, and assess structural complexity.",
+    tech: ["Next.js", "AI/ML", "Computer Vision"],
+    github: "https://github.com/akhil-p-git/Precision-Roof-Measurement-and-Complexity-Mapping",
+    demo: "https://precision-roof-measurement.vercel.app/",
   },
   {
     id: 2,
-    title: "Project Alpha",
+    title: "Varsity Tutors",
     description:
-      "A full-stack web application with user authentication, real-time updates, and a modern UI. Built with best practices in mind.",
-    tech: ["React", "Node.js", "MongoDB"],
-    github: "#",
-    demo: "#",
-    status: "completed",
+      "An AI-powered education platform connecting students, tutors, and parents. Features personalized tutor matching, real-time progress tracking, and gamified learning.",
+    tech: ["React", "Node.js", "AI"],
+    github: "https://github.com/akhil-p-git/Varsity-Tutors",
+    demo: "https://varsity-tutors-six.vercel.app/dashboard",
   },
   {
     id: 3,
-    title: "CLI Tool",
+    title: "PharmaGen",
     description:
-      "A command-line utility that automates repetitive tasks and improves developer productivity. Cross-platform compatible.",
-    tech: ["Python", "Click", "Rich"],
-    github: "#",
-    status: "completed",
+      "An AI-powered video generator tailored for pharmaceutical advertising. Create professional, compliant pharmaceutical ads with an intuitive interface.",
+    tech: ["React", "AI", "Video Generation"],
+    github: "https://github.com/akhil-p-git/omnigen",
+    demo: "https://d1v5wy9q3smjkj.cloudfront.net/",
   },
   {
     id: 4,
-    title: "Future Project",
+    title: "Site Layout",
     description:
-      "An exciting project in the planning phase. Stay tuned for updates on this innovative solution.",
-    tech: ["TBD"],
-    status: "planned",
+      "A mapping tool designed for builders and construction teams. Plot out areas on an interactive map, analyze terrain data, and view key site statistics.",
+    tech: ["React", "Maps API", "GIS"],
+    github: "https://github.com/akhil-p-git/SiteLayout",
+    demo: "https://d2p18kimlqk1xr.cloudfront.net/",
   },
 ];
-
-const statusColors = {
-  completed: "#27c93f",
-  "in-progress": "#ffbd2e",
-  planned: "#888",
-};
 
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -82,110 +75,77 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="min-h-screen flex items-center py-20 px-4"
+      className="py-24 px-6"
     >
-      <div className="max-w-5xl mx-auto w-full">
+      <div className="max-w-4xl mx-auto">
         <div
           className={`transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-2xl md:text-3xl mb-8">
-            <span className="text-[#00ffff]">{">"}</span>{" "}
-            <span className="text-[#00ff00] glow">./projects</span>
+          <h2 className="text-3xl font-bold text-white mb-12">
+            Projects
           </h2>
 
-          <div className="text-[#888] mb-6">
-            <span className="text-[#00ff00]">$ </span>
-            ls -la ~/projects
-          </div>
-
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <div
                 key={project.id}
-                className="terminal-window group hover:border-[#00ff00]/50 transition-all duration-300"
-                style={{
-                  animationDelay: `${index * 150}ms`,
-                }}
+                className="card group hover:border-[#3b82f6]/50"
               >
-                <div className="terminal-header">
-                  <div className="terminal-dot red"></div>
-                  <div className="terminal-dot yellow"></div>
-                  <div className="terminal-dot green"></div>
-                  <span className="text-[#888] text-xs ml-4 flex-1">
-                    {project.title.toLowerCase().replace(/\s/g, "-")}/
-                  </span>
-                  <span
-                    className="text-xs"
-                    style={{ color: statusColors[project.status] }}
-                  >
-                    [{project.status}]
-                  </span>
-                </div>
-                <div className="terminal-body">
-                  <div className="mb-4">
-                    <span className="text-[#ffb000] text-lg group-hover:glow transition-all">
-                      {project.title}
+                <h3 className="text-white font-semibold text-xl mb-3">
+                  {project.title}
+                </h3>
+
+                <p className="text-[#666] text-sm mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-xs px-2 py-1 bg-[#1a1a1a] text-[#a1a1a1] rounded"
+                    >
+                      {tech}
                     </span>
-                  </div>
+                  ))}
+                </div>
 
-                  <p className="text-[#888] text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs px-2 py-1 border border-[#1a1a1a] text-[#00ffff]"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-4 pt-4 border-t border-[#1a1a1a]">
-                    {project.github && project.github !== "#" && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-[#888] hover:text-[#00ff00] transition-colors"
-                      >
-                        [github]
-                      </a>
-                    )}
-                    {project.demo && project.demo !== "#" && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-[#888] hover:text-[#00ff00] transition-colors"
-                      >
-                        [live demo]
-                      </a>
-                    )}
-                    {(!project.github || project.github === "#") &&
-                      (!project.demo || project.demo === "#") && (
-                        <span className="text-sm text-[#888]">
-                          [coming soon]
-                        </span>
-                      )}
-                  </div>
+                <div className="flex gap-4 pt-4 border-t border-[#262626]">
+                  {project.github && project.github !== "#" && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[#a1a1a1] hover:text-white transition-colors"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                  {project.demo && project.demo !== "#" && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[#a1a1a1] hover:text-white transition-colors"
+                    >
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <a
               href="https://github.com/akhil-p-git"
               target="_blank"
               rel="noopener noreferrer"
-              className="terminal-btn inline-block"
+              className="btn-secondary inline-block"
             >
-              ./view_all_repositories
+              View All Projects
             </a>
           </div>
         </div>

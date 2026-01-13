@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { label: "home", href: "#home" },
-  { label: "about", href: "#about" },
-  { label: "skills", href: "#skills" },
-  { label: "projects", href: "#projects" },
-  { label: "contact", href: "#contact" },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navigation() {
@@ -38,33 +38,35 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-[#1a1a1a]" : ""
+        isScrolled
+          ? "bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#262626]"
+          : ""
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 py-4">
+      <div className="max-w-5xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-[#00ff00] glow font-bold text-lg">
-            ~/akhil
+          <a
+            href="#home"
+            className="text-white font-semibold text-lg hover:text-[#3b82f6] transition-colors"
+          >
+            Akhil
           </a>
-          <ul className="hidden md:flex items-center gap-6">
+          <ul className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className={`text-sm transition-all duration-200 ${
+                  className={`text-sm transition-colors ${
                     activeSection === item.href.slice(1)
-                      ? "text-[#00ff00] glow"
-                      : "text-[#888] hover:text-[#00ff00]"
+                      ? "text-white"
+                      : "text-[#a1a1a1] hover:text-white"
                   }`}
                 >
-                  ./{item.label}
+                  {item.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="md:hidden text-[#00ff00]">
-            <span className="text-xs">[menu]</span>
-          </div>
         </div>
       </div>
     </nav>

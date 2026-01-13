@@ -27,83 +27,49 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="min-h-screen flex items-center py-20 px-4"
+      className="py-24 px-6"
     >
-      <div className="max-w-4xl mx-auto w-full">
+      <div className="max-w-4xl mx-auto">
         <div
           className={`transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-2xl md:text-3xl mb-8">
-            <span className="text-[#00ffff]">{">"}</span>{" "}
-            <span className="text-[#00ff00] glow">./about_me</span>
+          <h2 className="text-3xl font-bold text-white mb-12">
+            About Me
           </h2>
 
-          <div className="terminal-window">
-            <div className="terminal-header">
-              <div className="terminal-dot red"></div>
-              <div className="terminal-dot yellow"></div>
-              <div className="terminal-dot green"></div>
-              <span className="text-[#888] text-xs ml-4">about.md</span>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="md:col-span-2 space-y-4">
+              <p className="text-[#a1a1a1] leading-relaxed">
+                Hello! I&apos;m Akhil, a software developer with a passion for
+                building digital experiences. I enjoy creating things that live
+                on the internet, whether that be websites, applications, or
+                anything in between.
+              </p>
+
+              <p className="text-[#a1a1a1] leading-relaxed">
+                My journey into programming started with curiosity about how
+                things work. Since then, I&apos;ve had the privilege of working on
+                various projects that have helped me grow as a developer.
+              </p>
+
+              <p className="text-[#a1a1a1] leading-relaxed">
+                I focus on writing clean, efficient code and creating
+                user-friendly interfaces. When I&apos;m not coding, you can find me
+                exploring new technologies or contributing to open source.
+              </p>
             </div>
-            <div className="terminal-body space-y-6">
-              <div>
-                <span className="text-[#ff0040]">## </span>
-                <span className="text-[#ffb000]">Who am I?</span>
+
+            <div className="space-y-6">
+              <div className="card">
+                <h3 className="text-white font-medium mb-2">Location</h3>
+                <p className="text-[#666]">Available Worldwide</p>
               </div>
 
-              <p className="text-[#ccc] leading-relaxed">
-                Hey there! I&apos;m <span className="text-[#00ff00]">Akhil</span>, a
-                passionate software developer who loves turning ideas into
-                reality through code. I enjoy building things that live on the
-                internet, whether that be websites, applications, or anything in
-                between.
-              </p>
-
-              <div>
-                <span className="text-[#ff0040]">## </span>
-                <span className="text-[#ffb000]">My Journey</span>
-              </div>
-
-              <p className="text-[#ccc] leading-relaxed">
-                My journey into the world of programming started with curiosity
-                and a desire to understand how things work. Since then, I&apos;ve
-                been on a continuous path of learning, building, and improving.
-                Every line of code is an opportunity to solve problems and
-                create something meaningful.
-              </p>
-
-              <div>
-                <span className="text-[#ff0040]">## </span>
-                <span className="text-[#ffb000]">What drives me?</span>
-              </div>
-
-              <ul className="text-[#ccc] space-y-2">
-                <li>
-                  <span className="text-[#00ff00]">-</span> Building clean,
-                  efficient, and scalable solutions
-                </li>
-                <li>
-                  <span className="text-[#00ff00]">-</span> Learning new
-                  technologies and frameworks
-                </li>
-                <li>
-                  <span className="text-[#00ff00]">-</span> Collaborating with
-                  others to create amazing products
-                </li>
-                <li>
-                  <span className="text-[#00ff00]">-</span> Solving complex
-                  problems with elegant code
-                </li>
-              </ul>
-
-              <div className="pt-4 border-t border-[#1a1a1a]">
-                <span className="text-[#888]">Current location:</span>{" "}
-                <span className="text-[#00ffff]">Earth</span>
-                <br />
-                <span className="text-[#888]">Status:</span>{" "}
-                <span className="text-[#27c93f]">Available for opportunities</span>
+              <div className="card">
+                <h3 className="text-white font-medium mb-2">Status</h3>
+                <p className="text-[#3b82f6]">Open to opportunities</p>
               </div>
             </div>
           </div>
