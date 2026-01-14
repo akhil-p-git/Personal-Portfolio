@@ -64,12 +64,12 @@ export default function About() {
             <div className="space-y-6">
               <div className="card">
                 <h3 className="text-white font-medium mb-2">Location</h3>
-                <p className="text-[#666]">Available Worldwide</p>
+                <p className="text-[#666]">Bay Area, California</p>
               </div>
 
               <div className="card">
                 <h3 className="text-white font-medium mb-2">Status</h3>
-                <p className="text-[#3b82f6]">Open to opportunities</p>
+                <p className="text-[#3b82f6]">AI Instructor, Open To New Opportunities</p>
               </div>
             </div>
           </div>
