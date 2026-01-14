@@ -57,7 +57,7 @@ export default function About() {
               <p className="text-[#a1a1a1] leading-relaxed">
                 I focus on writing clean, efficient code and creating
                 user-friendly interfaces. When I&apos;m not coding, you can find me
-                exploring new technologies or contributing to open source.
+                exploring new technologies, lifting, or playing billiards.
               </p>
             </div>
 
