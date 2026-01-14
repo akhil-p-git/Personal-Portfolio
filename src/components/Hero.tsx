@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 
 const titles = [
-  "Software Developer",
+  "AI Enthusiast",
+  "Fullstack Developer",
   "Problem Solver",
-  "Code Enthusiast",
 ];
 
 export default function Hero() {
@@ -65,8 +65,9 @@ export default function Hero() {
         </div>
 
         <p className="text-[#666] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-          I build things for the web. Passionate about creating clean,
-          efficient solutions and turning ideas into reality through code.
+          I build things for fun that I&apos;m passionate about. I enjoy creating
+          clean, efficient solutions to real problems and turning my ideas into
+          reality with AI first development.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
