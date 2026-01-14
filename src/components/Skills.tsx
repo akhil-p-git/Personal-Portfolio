@@ -14,6 +14,7 @@ import {
   SiGit,
   SiDocker,
   SiLinux,
+  SiTerraform,
   SiAmazonwebservices,
   SiAnthropic,
   SiN8N,
@@ -21,7 +22,6 @@ import {
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { BsRobot, BsCursor } from "react-icons/bs";
-import { VscCode } from "react-icons/vsc";
 import { IconType } from "react-icons";
 
 interface Skill {
@@ -60,9 +60,9 @@ const skillCategories: SkillCategory[] = [
     title: "Tools",
     skills: [
       { name: "Git", icon: SiGit, color: "#F05032" },
-      { name: "Docker", icon: SiDocker, color: "#2496ED" },
+      { name: "Docker/K8s", icon: SiDocker, color: "#2496ED" },
       { name: "Linux", icon: SiLinux, color: "#FCC624" },
-      { name: "VS Code", icon: VscCode, color: "#007ACC" },
+      { name: "Terraform", icon: SiTerraform, color: "#844FBA" },
       { name: "AWS", icon: SiAmazonwebservices, color: "#FF9900" },
     ],
   },
