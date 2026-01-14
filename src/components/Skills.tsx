@@ -2,43 +2,27 @@
 
 import { useEffect, useRef, useState } from "react";
 
-interface Skill {
-  name: string;
-  level: number;
-}
-
 interface SkillCategory {
   title: string;
-  skills: Skill[];
+  skills: string[];
 }
 
 const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
-    skills: [
-      { name: "JavaScript", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Python", level: 80 },
-      { name: "HTML/CSS", level: 90 },
-    ],
+    skills: ["JavaScript", "TypeScript", "Python", "Java", "HTML/CSS"],
   },
   {
     title: "Frameworks",
-    skills: [
-      { name: "React", level: 85 },
-      { name: "Next.js", level: 80 },
-      { name: "Node.js", level: 80 },
-      { name: "TailwindCSS", level: 90 },
-    ],
+    skills: ["React", "Next.js", "Node.js", "Express.js", "TailwindCSS"],
   },
   {
     title: "Tools",
-    skills: [
-      { name: "Git", level: 85 },
-      { name: "Docker", level: 70 },
-      { name: "Linux", level: 75 },
-      { name: "VS Code", level: 90 },
-    ],
+    skills: ["Git", "Docker", "Linux", "VS Code", "AWS"],
+  },
+  {
+    title: "AI",
+    skills: ["Claude", "Cursor", "n8n", "Langchain", "Tableau"],
   },
 ];
 
@@ -79,33 +63,25 @@ export default function Skills() {
             Skills
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {skillCategories.map((category) => (
-              <div key={category.title} className="space-y-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {skillCategories.map((category, categoryIndex) => (
+              <div key={category.title} className="space-y-4">
                 <h3 className="text-white font-medium text-lg">
                   {category.title}
                 </h3>
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, index) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between mb-2">
-                        <span className="text-[#a1a1a1] text-sm">
-                          {skill.name}
-                        </span>
-                        <span className="text-[#666] text-sm">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="skill-bar">
-                        <div
-                          className="skill-bar-fill"
-                          style={{
-                            width: isVisible ? `${skill.level}%` : "0%",
-                            transitionDelay: `${index * 100}ms`,
-                          }}
-                        />
-                      </div>
-                    </div>
+                    <span
+                      key={skill}
+                      className={`px-3 py-1.5 bg-[#1a1a1a] text-[#a1a1a1] text-sm rounded-md border border-[#262626] hover:border-[#3b82f6] hover:text-white transition-all duration-300 ${
+                        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                      }`}
+                      style={{
+                        transitionDelay: `${categoryIndex * 100 + index * 50}ms`,
+                      }}
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>
