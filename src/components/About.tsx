@@ -42,34 +42,33 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2 space-y-4">
               <p className="text-[#a1a1a1] leading-relaxed">
-                Hello! I&apos;m Akhil, a software developer with a passion for
-                building digital experiences. I enjoy creating things that live
-                on the internet, whether that be websites, applications, or
-                anything in between.
+                Hello! I&apos;m Akhil — a full-stack developer with 5+ years of
+                experience shipping web, mobile, and business applications
+                across React, Next.js, ASP.NET Core, and Node.
               </p>
 
               <p className="text-[#a1a1a1] leading-relaxed">
-                My journey into programming started with curiosity about how
-                things work. Since then, I&apos;ve had the privilege of working on
-                various projects that have helped me grow as a developer.
+                I recently completed an AI engineering fellowship at Gauntlet AI,
+                where I built and shipped a series of AI-first products using
+                Cursor, Claude Code, LangGraph, n8n, and modern full-stack tooling.
               </p>
 
               <p className="text-[#a1a1a1] leading-relaxed">
-                I focus on writing clean, efficient code and creating
-                user-friendly interfaces. When I&apos;m not coding, you can find me
-                exploring new technologies, lifting, or playing billiards.
+                I focus on clean architecture, fast iteration, and turning fuzzy
+                ideas into things you can click and use. Outside of coding I&apos;m
+                lifting, playing billiards, or tinkering with side-project games.
               </p>
             </div>
 
             <div className="space-y-6">
               <div className="card">
                 <h3 className="text-white font-medium mb-2">Location</h3>
-                <p className="text-[#666]">Bay Area, California</p>
+                <p className="text-[#666]">San Ramon, CA</p>
               </div>
 
               <div className="card">
                 <h3 className="text-white font-medium mb-2">Status</h3>
-                <p className="text-[#3b82f6]">AI Instructor, Open To New Opportunities</p>
+                <p className="text-[#3b82f6]">Open to Full-Time Roles</p>
               </div>
             </div>
           </div>

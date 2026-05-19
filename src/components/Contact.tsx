@@ -34,7 +34,10 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const subject = `Portfolio message from ${formState.name}`;
+    const body = `From: ${formState.name} <${formState.email}>\n\n${formState.message}`;
+    const mailto = `mailto:akhilrvpinnani@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
 
     setSubmitted(true);
     setIsSubmitting(false);
@@ -103,10 +106,10 @@ export default function Contact() {
               {submitted ? (
                 <div className="card text-center py-8">
                   <p className="text-[#3b82f6] font-medium">
-                    Message sent successfully!
+                    Opening your mail client…
                   </p>
                   <p className="text-[#666] text-sm mt-2">
-                    I&apos;ll get back to you soon.
+                    If nothing happened, email me directly at akhilrvpinnani@gmail.com
                   </p>
                 </div>
               ) : (

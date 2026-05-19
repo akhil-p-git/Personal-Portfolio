@@ -13,14 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Akhil | Developer",
-  description: "Personal portfolio of Akhil - Software Developer",
-  keywords: ["developer", "portfolio", "software engineer", "web developer"],
-  authors: [{ name: "Akhil" }],
+  title: "Akhil Pinnani | Full Stack Developer & AI-First Engineer",
+  description: "Full Stack Developer and AI-First Engineer with 5+ years building web, mobile, and AI-first products. Open to full-time roles.",
+  keywords: ["full stack developer", "ai engineer", "react", "next.js", "typescript", "portfolio", "akhil pinnani"],
+  authors: [{ name: "Akhil Pinnani" }],
   openGraph: {
-    title: "Akhil | Developer",
-    description: "Personal portfolio of Akhil - Software Developer",
+    title: "Akhil Pinnani | Full Stack Developer & AI-First Engineer",
+    description: "Full Stack Developer and AI-First Engineer with 5+ years building web, mobile, and AI-first products.",
     type: "website",
+    url: "https://akhil-p.dev",
   },
 };
 

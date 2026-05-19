@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 
 const titles = [
-  "AI Enthusiast",
-  "Fullstack Developer",
+  "Full Stack Developer",
+  "AI-First Engineer",
   "Problem Solver",
 ];
 
@@ -65,9 +65,9 @@ export default function Hero() {
         </div>
 
         <p className="text-[#666] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-          I build things for fun that I&apos;m passionate about. I enjoy creating
-          clean, efficient solutions to real problems and turning my ideas into
-          reality with AI first development.
+          I build web, mobile, and AI-first products end-to-end. 5+ years across
+          React, Next.js, ASP.NET Core, Node, and Python — with a recent focus
+          on agentic and LLM-driven applications.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

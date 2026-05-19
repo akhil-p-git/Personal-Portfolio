@@ -14,39 +14,53 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Precision Roof Measurement",
+    title: "CollabCanvas",
     description:
-      "An AI-driven roof measurement and complexity mapping application. Upload satellite or aerial imagery to automatically detect roof boundaries, calculate precise measurements, and assess structural complexity.",
-    tech: ["Next.js", "AI/ML", "Computer Vision"],
-    github: "https://github.com/akhil-p-git/Precision-Roof-Measurement-and-Complexity-Mapping",
-    demo: "https://precision-roof-measurement.vercel.app/",
+      "Real-time collaborative design canvas with AI-assisted generation. Live cursors, presence indicators, and GPT-4o powered shape commands. Open in multiple tabs to see real-time sync.",
+    tech: ["React", "Firebase", "Konva", "GPT-4o"],
+    github: "https://github.com/akhil-p-git/CollabCanvas",
+    demo: "https://collab-canvas-f20e2.web.app",
   },
   {
     id: 2,
-    title: "Varsity Tutors",
+    title: "MessageAI",
     description:
-      "An AI-powered education platform connecting students, tutors, and parents. Features personalized tutor matching, real-time progress tracking, and gamified learning.",
-    tech: ["React", "Node.js", "AI"],
-    github: "https://github.com/akhil-p-git/Varsity-Tutors",
-    demo: "https://varsity-tutors-six.vercel.app/dashboard",
+      "iOS messaging app with real-time chat, GPT-powered conversation summaries, action item extraction, decision tracking, and semantic search across message history.",
+    tech: ["SwiftUI", "Firebase", "OpenAI"],
+    github: "https://github.com/akhil-p-git/MessageAI",
   },
   {
     id: 3,
-    title: "PharmaGen",
+    title: "ClipForge",
     description:
-      "An AI-powered video generator tailored for pharmaceutical advertising. Create professional, compliant pharmaceutical ads with an intuitive interface.",
-    tech: ["React", "AI", "Video Generation"],
-    github: "https://github.com/akhil-p-git/omnigen",
-    demo: "https://d1v5wy9q3smjkj.cloudfront.net/",
+      "Desktop video editor with screen/webcam capture, timeline editing, FFmpeg export, and Whisper-powered transcription. Built for streamers and content creators.",
+    tech: ["Electron", "React", "FFmpeg", "Whisper"],
+    github: "https://github.com/akhil-p-git/ClipForge",
   },
   {
     id: 4,
-    title: "Site Layout",
+    title: "AI Command Center",
     description:
-      "A mapping tool designed for builders and construction teams. Plot out areas on an interactive map, analyze terrain data, and view key site statistics.",
-    tech: ["React", "Maps API", "GIS"],
-    github: "https://github.com/akhil-p-git/SiteLayout",
-    demo: "https://d2p18kimlqk1xr.cloudfront.net/",
+      "Admin dashboard for monitoring and managing AI agents, workflows, and conversations. Vector store management, n8n workflow integration, and live agent step visualization.",
+    tech: ["FastAPI", "React", "LangGraph", "n8n"],
+    github: "https://github.com/akhil-p-git/ai-command-center",
+  },
+  {
+    id: 5,
+    title: "RapidPhotoUpload",
+    description:
+      "Media platform with resumable chunked uploads, automated thumbnail/EXIF processing, WebSocket progress updates, and Cloudflare R2 or local storage options.",
+    tech: ["Spring Boot", "React", "Cloudflare R2"],
+    github: "https://github.com/akhil-p-git/RapidPhotoUpload",
+  },
+  {
+    id: 6,
+    title: "Varsity Tutors MVP",
+    description:
+      "Growth-focused education MVP with gamified social learning loops, agent-based personalization, voice room flows, and K-factor analytics for engagement experiments.",
+    tech: ["Next.js 14", "TypeScript", "Tailwind"],
+    github: "https://github.com/akhil-p-git/Varsity-Tutors",
+    demo: "https://varsity-tutors-six.vercel.app/dashboard",
   },
 ];
 
@@ -87,7 +101,7 @@ export default function Projects() {
             Projects
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
               <div
                 key={project.id}
