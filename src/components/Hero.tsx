@@ -56,7 +56,7 @@ export default function Hero() {
         <p className="text-[#a1a1a1] mb-4">Hi, my name is</p>
 
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
-          Akhil
+          Akhil Pinnani
         </h1>
 
         <div className="text-2xl md:text-4xl text-[#a1a1a1] mb-6 h-12">

@@ -18,7 +18,7 @@ import {
   SiAmazonwebservices,
   SiAnthropic,
   SiN8N,
-  SiTableau,
+  SiOpenai,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { BsRobot, BsCursor } from "react-icons/bs";
@@ -72,8 +72,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Claude", icon: SiAnthropic, color: "#D4A27F" },
       { name: "Cursor", icon: BsCursor, color: "#00D1FF" },
       { name: "n8n", icon: SiN8N, color: "#EA4B71" },
-      { name: "Langchain", icon: BsRobot, color: "#1C3C3C" },
-      { name: "Tableau", icon: SiTableau, color: "#E97627" },
+      { name: "LangGraph", icon: BsRobot, color: "#1C3C3C" },
+      { name: "OpenAI", icon: SiOpenai, color: "#FFFFFF" },
     ],
   },
 ];
