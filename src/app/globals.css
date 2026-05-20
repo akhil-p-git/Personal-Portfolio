@@ -34,15 +34,17 @@ body {
   min-height: 100vh;
 }
 
-/* Link styling */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+/* Link styling — in @layer base so Tailwind text-color utilities can override it */
+@layer base {
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
 
-a:hover {
-  color: var(--accent-hover);
+  a:hover {
+    color: var(--accent-hover);
+  }
 }
 
 /* Scrollbar styling */
