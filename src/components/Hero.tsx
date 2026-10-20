@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const titles = [
   "Full Stack Developer",
@@ -53,6 +54,15 @@ export default function Hero() {
           showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
+        <Image
+          src="/akhil.jpg"
+          alt="Akhil Pinnani"
+          width={160}
+          height={160}
+          priority
+          className="mx-auto mb-6 h-32 w-32 rounded-full border-2 border-[#262626] object-cover ring-2 ring-[#3b82f6]/30 md:h-40 md:w-40"
+        />
+
         <p className="text-[#a1a1a1] mb-4">Hi, my name is</p>
 
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
