@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Akhil Pinnani | Full Stack Developer & AI-First Engineer",
-  description: "Full Stack Developer and AI-First Engineer with 5+ years building web, mobile, and AI-first products. Open to full-time roles.",
+  description: "Full Stack Developer and AI-First Engineer with 5+ years building web, mobile, and AI-first products. Open to full-time and contract roles.",
   keywords: ["full stack developer", "ai engineer", "react", "next.js", "typescript", "portfolio", "akhil pinnani"],
   authors: [{ name: "Akhil Pinnani" }],
   openGraph: {

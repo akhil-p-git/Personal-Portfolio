@@ -77,6 +77,14 @@ export default function Hero() {
           <a href="#contact" className="btn-secondary">
             Get In Touch
           </a>
+          <a
+            href="/Akhil-Pinnani-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            Resume
+          </a>
         </div>
       </div>
     </section>

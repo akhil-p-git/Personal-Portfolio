@@ -19,8 +19,11 @@ import {
   SiAnthropic,
   SiN8N,
   SiOpenai,
+  SiDotnet,
+  SiSpringboot,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import { TbBrandCSharp } from "react-icons/tb";
 import { BsRobot, BsCursor } from "react-icons/bs";
 import { IconType } from "react-icons";
 
@@ -43,6 +46,7 @@ const skillCategories: SkillCategory[] = [
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { name: "Python", icon: SiPython, color: "#3776AB" },
       { name: "Java", icon: FaJava, color: "#ED8B00" },
+      { name: "C#", icon: TbBrandCSharp, color: "#239120" },
       { name: "HTML/CSS", icon: SiHtml5, color: "#E34F26" },
     ],
   },
@@ -53,6 +57,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+      { name: "ASP.NET Core", icon: SiDotnet, color: "#512BD4" },
+      { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
       { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
     ],
   },

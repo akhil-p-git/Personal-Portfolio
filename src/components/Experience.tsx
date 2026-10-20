@@ -13,6 +13,17 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    company: "Soledad Data Solutions",
+    role: "AI Instructor",
+    location: "San Diego, CA (Remote)",
+    period: "Jan 2026 – May 2026",
+    highlights: [
+      "Designed and delivered a hands-on AI engineering curriculum to about 20 practicing software engineers across two cohorts of about 10 weeks each.",
+      "Taught modern AI development workflows — LLM APIs, agent orchestration, automation, and prompt engineering — as structured, repeatable lessons.",
+    ],
+    tags: ["LLM APIs", "Agents", "Automation", "Prompt Engineering"],
+  },
+  {
     company: "Gauntlet AI",
     role: "AI Engineering Fellow",
     location: "Austin, TX",
@@ -20,9 +31,10 @@ const experiences: ExperienceItem[] = [
     highlights: [
       "Selected for an intensive fellowship training engineers to design, build, and ship AI-first products end-to-end.",
       "Built and shipped a series of AI-first products — real-time collaboration, GPT-powered messaging, desktop video tooling, and growth experiments.",
+      "Engineered RapidPhotoUpload, a Spring Boot and React media platform with resumable chunked uploads, cutting bulk upload of 1,000 images from roughly 15–20 minutes to 2–3.",
       "Contributed to Chartsmith, Replicated's AI-powered Helm chart tool, across a TypeScript, Go, and Kubernetes codebase.",
     ],
-    tags: ["React", "Next.js", "LangGraph", "n8n", "FastAPI", "OpenAI"],
+    tags: ["React", "Next.js", "Spring Boot", "LangGraph", "n8n", "FastAPI", "OpenAI"],
   },
   {
     company: "Cathedral Plumbing",
@@ -30,10 +42,10 @@ const experiences: ExperienceItem[] = [
     location: "Carrollton, TX",
     period: "Aug 2022 – May 2025",
     highlights: [
-      "Built and maintained a responsive internal web portal with React and ASP.NET Core powering core business workflows.",
-      "Shipped three mobile apps — MiTrade, MiDia, and MiDay — streamlining field operations for technicians.",
-      "Expanded Jest unit and integration testing to catch regressions earlier and stabilize production releases.",
-      "Tuned microservice performance by optimizing service-to-service communication and database access.",
+      "Built and maintained a responsive internal web portal with React and ASP.NET Core, used by 7 construction companies to run core workflows and day-to-day field operations.",
+      "Shipped three mobile apps — MiTrade, MiDia, and MiDay — adopted by 3,000+ field technicians for job-critical tools and information.",
+      "Expanded Jest unit and integration testing to catch regressions earlier and stabilize production releases on a two-week release cycle.",
+      "Improved microservice response times, query times, and error rates by optimizing service-to-service communication and database access, with added monitoring and logging.",
     ],
     tags: ["React", "ASP.NET Core", "C#", "Jest", "Microservices"],
   },
@@ -49,10 +61,10 @@ const experiences: ExperienceItem[] = [
     tags: ["React", "CSS", "Agile"],
   },
   {
-    company: "Orbees Inc",
-    role: "Web Developer",
+    company: "Orbees Business Solutions",
+    role: "Frontend Developer",
     location: "Fremont, CA",
-    period: "Oct 2019 – Sep 2020",
+    period: "Jun 2019 – Oct 2020",
     highlights: [
       "Built a timesheet and leave-management portal with HTML, JavaScript, and CSS.",
       "Supported bug fixes, QA testing, and production rollout activities.",

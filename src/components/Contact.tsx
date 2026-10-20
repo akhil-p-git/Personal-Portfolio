@@ -63,8 +63,9 @@ export default function Contact() {
           </h2>
 
           <p className="text-[#a1a1a1] mb-12 max-w-xl">
-            I&apos;m currently open to new opportunities. Whether you have a
-            question or just want to say hi, feel free to reach out!
+            I&apos;m currently open to full-time roles, contract work, and
+            freelance projects. Whether you have a question or just want to say
+            hi, feel free to reach out!
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">

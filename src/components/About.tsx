@@ -51,6 +51,8 @@ export default function About() {
                 I recently completed an AI engineering fellowship at Gauntlet AI,
                 where I built and shipped a series of AI-first products using
                 Cursor, Claude Code, LangGraph, n8n, and modern full-stack tooling.
+                Since then I&apos;ve designed and taught an AI-engineering
+                curriculum to about 20 working software engineers.
               </p>
 
               <p className="text-[#a1a1a1] leading-relaxed">
@@ -64,11 +66,16 @@ export default function About() {
               <div className="card">
                 <h3 className="text-white font-medium mb-2">Location</h3>
                 <p className="text-[#666]">San Ramon, CA</p>
+                <p className="text-[#666] text-sm mt-1">
+                  Open to remote or relocation
+                </p>
               </div>
 
               <div className="card">
                 <h3 className="text-white font-medium mb-2">Status</h3>
-                <p className="text-[#3b82f6]">Open to Full-Time Roles</p>
+                <p className="text-[#3b82f6]">
+                  Open to Full-Time and Contract Roles
+                </p>
               </div>
             </div>
           </div>
