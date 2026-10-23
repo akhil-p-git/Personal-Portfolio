@@ -14,14 +14,15 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     company: "Soledad Data Solutions",
-    role: "AI Instructor",
+    role: "Full Stack AI Engineer & AI Instructor",
     location: "San Diego, CA (Remote)",
     period: "Jan 2026 – May 2026",
     highlights: [
-      "Designed and delivered a hands-on AI engineering curriculum to about 20 practicing software engineers across two cohorts of about 10 weeks each.",
-      "Taught modern AI development workflows — LLM APIs, agent orchestration, automation, and prompt engineering — as structured, repeatable lessons.",
+      "Designed and delivered a hands-on AI engineering curriculum to about 20 practicing software engineers across two cohorts of about 10 weeks each, covering how to design, build, and ship AI-first and agentic applications.",
+      "Led instruction on modern AI development workflows — LLM APIs, agent orchestration, automation, and prompt engineering — turning fast-moving practices into structured, repeatable lessons.",
+      "Built Java full-stack applications, including a trading application that was sold commercially.",
     ],
-    tags: ["LLM APIs", "Agents", "Automation", "Prompt Engineering"],
+    tags: ["Java", "LLM APIs", "Agents", "Automation", "Prompt Engineering"],
   },
   {
     company: "Gauntlet AI",
@@ -38,16 +39,17 @@ const experiences: ExperienceItem[] = [
   },
   {
     company: "Cathedral Plumbing",
-    role: "Full Stack Developer",
+    role: "Full Stack Developer (16-person team)",
     location: "Carrollton, TX",
     period: "Aug 2022 – May 2025",
     highlights: [
-      "Built and maintained a responsive internal web portal with React and ASP.NET Core, used by 7 construction companies to run core workflows and day-to-day field operations.",
-      "Shipped three mobile apps — MiTrade, MiDia, and MiDay — adopted by 3,000+ field technicians for job-critical tools and information.",
-      "Expanded Jest unit and integration testing to catch regressions earlier and stabilize production releases on a two-week release cycle.",
-      "Improved microservice response times, query times, and error rates by optimizing service-to-service communication and database access, with added monitoring and logging.",
+      "Built and maintained an internal web portal (React.js and ASP.NET Core on Microsoft Azure) used by 7 construction companies to run core operational workflows and day-to-day field operations.",
+      "Designed and shipped three production mobile apps — MiTrade, MiDia, and MiDay — adopted by 3,000+ field technicians for access to job-critical tools and information.",
+      "Expanded unit and integration test coverage with Jest, catching regressions earlier and improving release stability across production deployments on a two-week release cycle.",
+      "Improved microservice response times, query times, and error rates by optimizing service-to-service communication and database interactions, with added monitoring and logging for faster troubleshooting.",
+      "Supported the portal and mobile apps in production, working issues through ServiceNow tickets from triage to resolution.",
     ],
-    tags: ["React", "ASP.NET Core", "C#", "Jest", "Microservices"],
+    tags: ["React", "ASP.NET Core", "C#", "Azure", "Jest", "Microservices", "ServiceNow"],
   },
   {
     company: "Risk and Safety Solutions",
@@ -55,10 +57,10 @@ const experiences: ExperienceItem[] = [
     location: "Davis, CA",
     period: "Oct 2020 – Apr 2022",
     highlights: [
-      "Joined as a contract web developer building React features for an internal portal, then moved into full-time project coordination.",
-      "Drove Agile delivery — sprint planning, progress tracking, and stakeholder communication across engineering teams.",
+      "Joined as a contract web developer building React.js and CSS features for an internal portal, then transitioned into a full-time project coordination role.",
+      "Drove Agile delivery in Jira through sprint planning, progress tracking, blocker resolution, and stakeholder communication across engineering teams.",
     ],
-    tags: ["React", "CSS", "Agile"],
+    tags: ["React", "CSS", "Agile", "Jira"],
   },
   {
     company: "Orbees Business Solutions",
@@ -66,8 +68,7 @@ const experiences: ExperienceItem[] = [
     location: "Fremont, CA",
     period: "Jun 2019 – Oct 2020",
     highlights: [
-      "Built a timesheet and leave-management portal with HTML, JavaScript, and CSS.",
-      "Supported bug fixes, QA testing, and production rollout activities.",
+      "Built an internal timesheet and leave-management portal, and maintained Orbees' internal applications and websites — HTML, JavaScript, CSS.",
     ],
     tags: ["JavaScript", "HTML", "CSS"],
   },

@@ -88,12 +88,10 @@ export default function Hero() {
             Get In Touch
           </a>
           <a
-            href="/Akhil-Pinnani-Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:akhilrvpinnani@gmail.com"
             className="btn-secondary"
           >
-            Resume
+            Email me
           </a>
         </div>
       </div>
