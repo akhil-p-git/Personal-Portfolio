@@ -22,7 +22,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label="Switch between light and dark theme"
-      className="flex size-11 items-center justify-center rounded-sm hover:bg-hivis hover:text-on-hivis"
+      className="flex size-11 items-center justify-center rounded-sm hover:bg-surface"
     >
       <svg
         className="theme-icon-light size-5"

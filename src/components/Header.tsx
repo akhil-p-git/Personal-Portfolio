@@ -28,7 +28,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="link py-2 no-underline hover:underline"
+              className="py-2 decoration-2 underline-offset-8 hover:underline"
             >
               {l.label}
             </Link>
