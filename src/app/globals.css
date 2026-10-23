@@ -1,168 +1,244 @@
 @import "tailwindcss";
 
+/* Tokens mirror DESIGN.md. Light is the default; dark follows the system
+   unless the visitor picks a theme with the toggle (data-theme). */
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #111111;
-  --bg-tertiary: #1a1a1a;
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1a1;
-  --text-muted: #666666;
-  --accent: #3b82f6;
-  --accent-hover: #60a5fa;
-  --border: #262626;
+  --paper: #f2f5f1;
+  --surface: #e6ece6;
+  --ink: #0f211d;
+  --muted: #44564f;
+  --rule: #bcc9c2;
+  --hivis: #f4c20d;
+  --on-hivis: #0f211d;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --paper: #0b1a17;
+  --surface: #12251f;
+  --ink: #e9f0ec;
+  --muted: #9fb3ab;
+  --rule: #264039;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b1a17;
+    --surface: #12251f;
+    --ink: #e9f0ec;
+    --muted: #9fb3ab;
+    --rule: #264039;
+    color-scheme: dark;
+  }
 }
 
 @theme inline {
-  --color-background: var(--bg-primary);
-  --color-foreground: var(--text-primary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-* {
-  box-sizing: border-box;
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-hivis: var(--hivis);
+  --color-on-hivis: var(--on-hivis);
+  --font-ui: var(--font-archivo), system-ui, sans-serif;
+  --font-body: var(--font-source-serif), Georgia, serif;
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
 }
 
-/* Link styling — in @layer base so Tailwind text-color utilities can override it */
-@layer base {
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  a:hover {
-    color: var(--accent-hover);
-  }
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
-}
-
-/* Selection styling */
 ::selection {
-  background: var(--accent);
-  color: var(--bg-primary);
+  background: var(--hivis);
+  color: var(--on-hivis);
 }
 
-/* Button styling */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@layer components {
+/* Signage headline: Archivo at condensed width. */
+.display {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-stretch: 75%;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.heading {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-stretch: 85%;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.ui {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.65rem 1.25rem;
+  border: 2px solid var(--ink);
+  border-radius: 2px;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  transition: background-color 0.15s, color 0.15s;
+}
+.btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
 .btn-primary {
-  background: var(--accent);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
+  background: var(--hivis);
+  color: var(--on-hivis);
+  border-color: var(--hivis);
 }
-
+:root[data-theme="light"] .btn-primary,
+:root:not([data-theme]) .btn-primary {
+  border-color: var(--ink);
+}
 .btn-primary:hover {
-  background: var(--accent-hover);
-  transform: translateY(-1px);
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
 }
 
-.btn-secondary {
-  background: transparent;
-  color: var(--text-primary);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  border: 1px solid var(--border);
-  cursor: pointer;
+.chip {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
-.btn-secondary:hover {
-  border-color: var(--text-secondary);
-  background: var(--bg-secondary);
+/* Inline links: ink underline, hi-vis highlight on hover. */
+.link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: background-color 0.15s, color 0.15s;
+}
+.link:hover {
+  background: var(--hivis);
+  color: var(--on-hivis);
+  text-decoration-color: transparent;
 }
 
-/* Card styling */
 .card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px;
-  transition: all 0.2s ease;
-}
-
-.card:hover {
-  border-color: var(--text-muted);
-}
-
-/* Section styling */
-section {
   position: relative;
-}
-
-/* Skill bar styling */
-.skill-bar {
-  background: var(--bg-tertiary);
-  height: 6px;
-  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
   overflow: hidden;
+  transition: border-color 0.15s;
+}
+.card:hover,
+.card:focus-within {
+  border-color: var(--ink);
+}
+.card .plate img {
+  transition: transform 0.6s var(--ease-out-strong);
+}
+.card:hover .plate img {
+  transform: scale(1.02);
 }
 
-.skill-bar-fill {
-  height: 100%;
-  background: var(--accent);
-  border-radius: 3px;
-  transition: width 0.8s ease-out;
+/* Stretch a card's title link over the whole card. */
+.stretch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
 }
 
-/* Fade in animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* One orchestrated moment: the hero settles into place on load. Transform
+   only, so the text is visible from the first frame and LCP is not delayed. */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.8s var(--ease-out-strong) both;
+    animation-delay: var(--d, 0s);
+  }
+  @keyframes rise {
+    from {
+      transform: translateY(1.5rem);
+    }
+    to {
+      transform: none;
+    }
+  }
 }
 
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
+/* Small scroll reveals on project cards and timeline entries only.
+   Progressive enhancement: content is visible without support. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(0.75rem);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
 }
 
-/* Input styling */
-input, textarea {
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 12px 16px;
-  color: var(--text-primary);
-  font-family: inherit;
-  transition: border-color 0.2s ease;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent);
+.theme-icon-dark {
+  display: none;
 }
-
-input::placeholder, textarea::placeholder {
-  color: var(--text-muted);
+:root[data-theme="dark"] .theme-icon-light {
+  display: none;
+}
+:root[data-theme="dark"] .theme-icon-dark {
+  display: block;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon-light {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .theme-icon-dark {
+    display: block;
+  }
 }
