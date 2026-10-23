@@ -212,6 +212,8 @@ export interface ProjectImage {
   width: number;
   height: number;
   caption?: string;
+  /** CSS object-position for cropped covers. Defaults to the top edge. */
+  focus?: string;
 }
 
 export interface Project {
@@ -503,6 +505,7 @@ export const projects: Project[] = [
         width: 1440,
         height: 900,
         caption: "The demo opens on a list of mock users to log in as.",
+        focus: "50% 22%",
       },
     ],
     overview: [
