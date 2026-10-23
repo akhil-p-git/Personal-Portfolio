@@ -455,7 +455,7 @@ export const projects: Project[] = [
     title: "aihub",
     period: "Oct 2026 – present",
     summary:
-      "A private web chat that puts local models, OpenRouter models and a spend-capped Claude workspace behind one composer.",
+      "A Claude-style chat app that runs on free and local models, with a spend-capped Claude workspace as an option, behind one composer.",
     problem:
       "One person, many models: local Ollama, free and cheap OpenRouter models, and Claude, with a visible cost and a hard spending limit.",
     built: [
@@ -484,7 +484,7 @@ export const projects: Project[] = [
       },
     ],
     overview: [
-      "aihub is a private AI hub for one person: a web chat that puts local, free and paid models behind one composer. I run it as a systemd user service on my own machine.",
+      "aihub is a clone of Claude's chat experience, built to run on free and local models: a private web chat for one person that puts local Ollama models, free OpenRouter models and an optional spend-capped Claude workspace behind one composer. I run it as a systemd user service on my own machine.",
     ],
     details: [
       {
