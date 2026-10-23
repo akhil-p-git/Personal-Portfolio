@@ -1,82 +1,25 @@
-# Personal Portfolio
+# akhil-p.dev
 
-A terminal-themed personal portfolio website built with Next.js 16, TypeScript, and TailwindCSS.
+Personal portfolio for Akhil Pinnani. Next.js 16 (App Router), TypeScript, Tailwind CSS v4. Statically generated, with light and dark themes that follow the system setting.
 
-## Features
+The design system is documented in [DESIGN.md](./DESIGN.md).
 
-- Terminal/hacker aesthetic with CRT effects and scanlines
-- Typing animation in the hero section
-- Responsive design
-- Smooth scroll navigation
-- Interactive skill bars with category filters
-- Project showcase with status indicators
-- Contact form
+## Content
 
-## Tech Stack
+All copy lives in [`src/content/site.ts`](./src/content/site.ts): profile, experience, skills, education and projects. It is derived from the master resume and each project's README. Edit that file, not the components.
 
-- **Framework:** Next.js 16 (App Router)
-- **Language:** TypeScript
-- **Styling:** TailwindCSS
-- **Deployment:** Vercel (recommended)
+Each project in `projects` gets a page at `/projects/<slug>`. A project's first image is its card cover; projects without a real screenshot show no image.
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm
-
-### Installation
+## Run it
 
 ```bash
-# Clone the repository
-git clone https://github.com/akhil-p-git/Personal-Portfolio.git
-
-# Navigate to project directory
-cd Personal-Portfolio
-
-# Install dependencies
 npm install
-
-# Run development server
-npm run dev
+npm run dev          # http://localhost:3000
+npm run build && npm start -- -p 3100
+npm run check:links -- http://localhost:3100   # crawls pages, anchors, images, external links
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+## Deploy
 
-### Build
-
-```bash
-npm run build
-npm run start
-```
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── globals.css    # Global styles and terminal theme
-│   ├── layout.tsx     # Root layout with metadata
-│   └── page.tsx       # Main page component
-└── components/
-    ├── Navigation.tsx # Fixed navigation bar
-    ├── Hero.tsx       # Landing section with typing effect
-    ├── About.tsx      # About me section
-    ├── Skills.tsx     # Skills with animated progress bars
-    ├── Projects.tsx   # Project showcase
-    ├── Contact.tsx    # Contact form and social links
-    └── Footer.tsx     # Footer component
-```
-
-## Customization
-
-1. Update personal info in each component
-2. Modify skills in `Skills.tsx`
-3. Add your projects in `Projects.tsx`
-4. Update social links in `Contact.tsx`
-5. Customize colors in `globals.css` CSS variables
-
-## License
-
-MIT
+Pushing to `main` deploys on Vercel.
