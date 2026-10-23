@@ -75,31 +75,38 @@ export default async function ProjectPage({ params }: Props) {
 
       {project.images.length > 0 && (
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {project.images.map((img, i) => (
-            <figure
-              key={img.src}
-              className={i === 0 ? "md:col-span-2" : undefined}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                width={img.width}
-                height={img.height}
-                sizes={
-                  i === 0
-                    ? "(min-width: 1152px) 1088px, 100vw"
-                    : "(min-width: 1152px) 528px, (min-width: 768px) 50vw, 100vw"
-                }
-                priority={i === 0}
-                className="w-full rounded-sm border border-rule"
-              />
-              {img.caption && (
-                <figcaption className="ui mt-2 text-sm text-muted">
-                  {img.caption}
-                </figcaption>
-              )}
-            </figure>
-          ))}
+          {project.images.map((img, i) => {
+            // The first image and an odd trailing one span the row.
+            const wide =
+              i === 0 ||
+              (i === project.images.length - 1 &&
+                (project.images.length - 1) % 2 === 1);
+            return (
+              <figure
+                key={img.src}
+                className={wide ? "md:col-span-2" : undefined}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={img.width}
+                  height={img.height}
+                  sizes={
+                    wide
+                      ? "(min-width: 1152px) 1088px, 100vw"
+                      : "(min-width: 1152px) 528px, (min-width: 768px) 50vw, 100vw"
+                  }
+                  priority={i === 0}
+                  className="w-full rounded-sm border border-rule"
+                />
+                {img.caption && (
+                  <figcaption className="ui mt-2 text-sm text-muted">
+                    {img.caption}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          })}
         </div>
       )}
 

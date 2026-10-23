@@ -18,8 +18,13 @@ export default function Work() {
           {featured.map((p) => (
             <ProjectCard key={p.slug} project={p} featured />
           ))}
-          {rest.map((p) => (
-            <ProjectCard key={p.slug} project={p} />
+          {rest.map((p, i) => (
+            <ProjectCard
+              key={p.slug}
+              project={p}
+              // An odd last card spans the row instead of leaving a gap.
+              featured={rest.length % 2 === 1 && i === rest.length - 1}
+            />
           ))}
         </div>
 

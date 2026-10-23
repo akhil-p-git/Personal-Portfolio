@@ -465,7 +465,24 @@ export const projects: Project[] = [
     stack: ["Python", "Starlette", "JavaScript", "Ollama", "OpenRouter", "Claude API"],
     github: "https://github.com/akhil-p-git/aihub",
     note: "Runs on your own machine; built and tested on Arch Linux only.",
-    images: [],
+    images: [
+      {
+        src: "/work/aihub-chat.webp",
+        alt: "aihub's chat page: a question about cache stampedes answered by a local qwen3:8b model, with model, reasoning effort, tokens per second, token count and time shown under the reply.",
+        width: 1440,
+        height: 655,
+        caption:
+          "A reply from a local model, with speed, token count and time under it. Screenshot of a fresh instance with an empty database.",
+      },
+      {
+        src: "/work/aihub-models.webp",
+        alt: "aihub's model picker listing local Ollama models with size, context and capabilities, and paid OpenRouter models that are disabled until a key is set.",
+        width: 1440,
+        height: 900,
+        caption:
+          "The model picker on a fresh install: local models are ready, paid ones are listed but disabled until a key is added.",
+      },
+    ],
     overview: [
       "aihub is a private AI hub for one person: a web chat that puts local, free and paid models behind one composer. I run it as a systemd user service on my own machine.",
     ],
