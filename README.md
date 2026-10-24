@@ -6,7 +6,7 @@ The design system is documented in [DESIGN.md](./DESIGN.md).
 
 ## Content
 
-All copy lives in [`src/content/site.ts`](./src/content/site.ts): profile, experience, skills, education and projects. It is derived from the master resume and each project's README. Edit that file, not the components.
+All copy lives in [`src/content/site.ts`](./src/content/site.ts): profile, skills, education and projects. It is derived from the master resume and each project's README. Edit that file, not the components.
 
 Each project in `projects` gets a page at `/projects/<slug>`. A project's first image is its card cover; projects without a real screenshot show no image.
 

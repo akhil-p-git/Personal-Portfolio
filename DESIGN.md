@@ -79,7 +79,7 @@ Section titles in a left column, content on the right from the md breakpoint. Ma
 2px on buttons and chips, 4px on cards. No pills.
 
 ## Motion
-Hero headline reveals once on load. Scroll reveals are small (12px, opacity) and only on project cards and timeline entries. Hover changes color or underline, never position. All motion is off under prefers-reduced-motion.
+Hero headline reveals once on load. Scroll reveals are small (12px, opacity) and only on project cards. Hover changes color or underline, never position. All motion is off under prefers-reduced-motion.
 
 ## Do's and Don'ts
 - Do show real screenshots only. No screenshot means no image, not a placeholder.

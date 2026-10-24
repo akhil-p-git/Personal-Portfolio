@@ -197,7 +197,7 @@ body {
   }
 }
 
-/* Small scroll reveals on project cards and timeline entries only.
+/* Small scroll reveals on project cards only.
    Progressive enhancement: content is visible without support. */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
