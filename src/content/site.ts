@@ -15,7 +15,7 @@ export const profile = {
   location: "San Ramon, CA",
   availability:
     "Open to full-time and contract work, onsite, hybrid or remote, anywhere in the US.",
-  email: "akhilrvpinnani@gmail.com",
+  email: "akhilpinnani96@gmail.com",
   linkedin: "https://www.linkedin.com/in/akhil-pinnani",
   github: "https://github.com/akhil-p-git",
   summary:
