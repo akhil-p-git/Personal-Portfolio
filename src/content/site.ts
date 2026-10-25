@@ -13,20 +13,12 @@ export const profile = {
     "Full-stack engineer building production web, mobile and AI-powered applications.",
   years: "7+",
   location: "San Ramon, CA",
-  availability:
-    "Open to full-time and contract work, onsite, hybrid or remote, anywhere in the US.",
   email: "akhilpinnani96@gmail.com",
   linkedin: "https://www.linkedin.com/in/akhil-pinnani",
   github: "https://github.com/akhil-p-git",
   summary:
-    "7+ years building production web, mobile, and AI-driven applications across React, Next.js, ASP.NET Core, and Node. At Cathedral Plumbing, I shipped an internal platform and three mobile apps serving 7 construction companies and 3,000+ field technicians. I completed the Gauntlet AI fellowship building agentic, LLM-powered products end-to-end, and have since designed and taught AI-engineering curriculum to working software engineers.",
+    "7+ years building production web, mobile, and AI-driven applications. Away from the keyboard, you'll usually find me staying fit, exploring somewhere new, or building something just for the fun of it.",
 } as const;
-
-export const stats = [
-  { value: "7+", label: "years building production software" },
-  { value: "3,000+", label: "field technicians using the mobile apps I shipped" },
-  { value: "7", label: "construction companies on one internal portal" },
-] as const;
 
 export const skills: { group: string; items: string[] }[] = [
   {
@@ -128,11 +120,6 @@ export const skills: { group: string; items: string[] }[] = [
     ],
   },
 ];
-
-export const education = [
-  { school: "Arizona State University", credential: "B.A. in Economics" },
-  { school: "BloomTech", credential: "Full Stack Development Training" },
-] as const;
 
 export interface ProjectImage {
   src: string;

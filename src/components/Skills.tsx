@@ -1,5 +1,5 @@
 import Section from "@/components/Section";
-import { education, skills } from "@/content/site";
+import { skills } from "@/content/site";
 
 export default function Skills() {
   return (
@@ -13,16 +13,6 @@ export default function Skills() {
             </div>
           ))}
         </dl>
-      </Section>
-      <Section id="education" title="Education">
-        <ul className="flex flex-col gap-4">
-          {education.map((e) => (
-            <li key={e.school}>
-              <p className="heading text-xl">{e.school}</p>
-              <p className="text-muted">{e.credential}</p>
-            </li>
-          ))}
-        </ul>
       </Section>
     </>
   );

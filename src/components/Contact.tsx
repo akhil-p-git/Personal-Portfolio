@@ -11,7 +11,6 @@ export default function Contact() {
         <h2 id="contact-title" className="display text-[clamp(2.75rem,9vw,6.5rem)]">
           Let&rsquo;s talk.
         </h2>
-        <p className="mt-6 max-w-prose">{profile.availability}</p>
         <p className="mt-8">
           <a
             href={`mailto:${profile.email}`}

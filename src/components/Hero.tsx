@@ -57,7 +57,7 @@ export default function Hero() {
 
       <div className="bg-hivis text-on-hivis">
         <p className="ui mx-auto max-w-6xl px-4 py-4 text-base font-semibold sm:px-8 md:text-lg">
-          {profile.availability} Based in {profile.location}.
+          Based in {profile.location}.
         </p>
       </div>
     </>

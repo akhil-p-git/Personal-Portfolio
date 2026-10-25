@@ -19,7 +19,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 const TITLE = `${profile.name}: ${profile.role}`;
-const DESCRIPTION = `${profile.name} is a full-stack engineer with ${profile.years} years of experience building production web, mobile and AI-powered applications. Based in ${profile.location}; open to full-time and contract work.`;
+const DESCRIPTION = `${profile.name} is a full-stack engineer with ${profile.years} years of experience building production web, mobile and AI-powered applications. Based in ${profile.location}.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -61,10 +61,6 @@ const personJsonLd = {
     addressRegion: "CA",
     addressCountry: "US",
   },
-  alumniOf: [
-    { "@type": "CollegeOrUniversity", name: "Arizona State University" },
-    { "@type": "EducationalOrganization", name: "BloomTech" },
-  ],
   sameAs: [profile.linkedin, profile.github],
 };
 
