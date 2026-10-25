@@ -54,12 +54,6 @@ export default function Hero() {
           </a>
         </div>
       </section>
-
-      <div className="bg-hivis text-on-hivis">
-        <p className="ui mx-auto max-w-6xl px-4 py-4 text-base font-semibold sm:px-8 md:text-lg">
-          Based in {profile.location}.
-        </p>
-      </div>
     </>
   );
 }

@@ -19,7 +19,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 const TITLE = `${profile.name}: ${profile.role}`;
-const DESCRIPTION = `${profile.name} is a full-stack engineer with ${profile.years} years of experience building production web, mobile and AI-powered applications. Based in ${profile.location}.`;
+const DESCRIPTION = `${profile.name} is a full-stack engineer with ${profile.years} years of experience building production web, mobile and AI-powered applications.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -55,12 +55,6 @@ const personJsonLd = {
   description: profile.positioning,
   email: `mailto:${profile.email}`,
   image: `${SITE_URL}/akhil.jpg`,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "San Ramon",
-    addressRegion: "CA",
-    addressCountry: "US",
-  },
   sameAs: [profile.linkedin, profile.github],
 };
 

@@ -58,7 +58,7 @@ export default function OpenGraphImage() {
             fontWeight: 700,
           }}
         >
-          {profile.years} years · {profile.location} · akhil-p.dev
+          {profile.years} years · akhil-p.dev
         </div>
       </div>
     ),

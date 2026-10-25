@@ -12,7 +12,6 @@ export const profile = {
   positioning:
     "Full-stack engineer building production web, mobile and AI-powered applications.",
   years: "7+",
-  location: "San Ramon, CA",
   email: "akhilpinnani96@gmail.com",
   linkedin: "https://www.linkedin.com/in/akhil-pinnani",
   github: "https://github.com/akhil-p-git",
