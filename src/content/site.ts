@@ -11,12 +11,12 @@ export const profile = {
   role: "Full-stack engineer",
   positioning:
     "Full-stack engineer building production web, mobile and AI-powered applications.",
-  years: "7+",
+  years: "8+",
   email: "akhilpinnani96@gmail.com",
   linkedin: "https://www.linkedin.com/in/akhil-pinnani",
   github: "https://github.com/akhil-p-git",
   summary:
-    "7+ years building production web, mobile, and AI-driven applications. Away from the keyboard, you'll usually find me staying fit, exploring somewhere new, or building something just for the fun of it.",
+    "8+ years building production web, mobile, and AI-driven applications. Away from the keyboard, you'll usually find me staying fit, exploring somewhere new, or building something just for the fun of it.",
 } as const;
 
 export const skills: { group: string; items: string[] }[] = [
